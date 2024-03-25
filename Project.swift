@@ -11,9 +11,6 @@ let project = Project(
             infoPlist: .extendingDefault(
                 with: [
                     "UILaunchStoryboardName": "LaunchScreen.storyboard",
-                    "NSAppTransportSecurity": {
-                        "NSAllowsArbitraryLoads": true
-                    },
                 ]
             ),
             sources: ["Weather/Sources/**"],

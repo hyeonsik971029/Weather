@@ -9,7 +9,12 @@
 /* Begin PBXBuildFile section */
 		127355D661960B1103DCEDFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A0E1BA9ECA4B525774433C /* ContentView.swift */; };
 		153272102E0C2BC7B55E7668 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20A9424E382555BA0BD4DA6 /* WeatherTests.swift */; };
-		3830C2622BAF089F00246E8C /* Locations.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3830C2612BAF089F00246E8C /* Locations.csv */; };
+		385BE9522BAF0CD900ADE13C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385BE9512BAF0CD900ADE13C /* Location.swift */; };
+		385BE9552BAF0D3900ADE13C /* FetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385BE9542BAF0D3900ADE13C /* FetchManager.swift */; };
+		385BE9572BAF154400ADE13C /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385BE9562BAF154400ADE13C /* Weather.swift */; };
+		385BE95A2BAF167600ADE13C /* ConvertCoord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385BE9592BAF167600ADE13C /* ConvertCoord.swift */; };
+		38DE8D872BB04FD100FE078F /* Locations_GPS.csv in Resources */ = {isa = PBXBuildFile; fileRef = 38DE8D862BB04FD100FE078F /* Locations_GPS.csv */; };
+		38DE8D892BB04FD700FE078F /* Locations_Grid.csv in Resources */ = {isa = PBXBuildFile; fileRef = 38DE8D882BB04FD700FE078F /* Locations_Grid.csv */; };
 		54B94E21444B57AF0978AB5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BA44D9515E66F8514BD11B /* Preview Assets.xcassets */; };
 		6C58EC40DEABC7D32E28C012 /* TuistAssets+Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C3BCCA2AB598FA95B41CF0 /* TuistAssets+Weather.swift */; };
 		76D18A466C5F17F49605292F /* TuistBundle+Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A94ED492F54DB1EDC74C43 /* TuistBundle+Weather.swift */; };
@@ -53,7 +58,12 @@
 
 /* Begin PBXFileReference section */
 		1DF4E92D9804B891D7197E71 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3830C2612BAF089F00246E8C /* Locations.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Locations.csv; path = ../../../../Documents/Locations.csv; sourceTree = "<group>"; };
+		385BE9512BAF0CD900ADE13C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		385BE9542BAF0D3900ADE13C /* FetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchManager.swift; sourceTree = "<group>"; };
+		385BE9562BAF154400ADE13C /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		385BE9592BAF167600ADE13C /* ConvertCoord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCoord.swift; sourceTree = "<group>"; };
+		38DE8D862BB04FD100FE078F /* Locations_GPS.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Locations_GPS.csv; sourceTree = "<group>"; };
+		38DE8D882BB04FD700FE078F /* Locations_Grid.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Locations_Grid.csv; sourceTree = "<group>"; };
 		3C5F4EB8F96BECD520C89EF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51BA44D9515E66F8514BD11B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A3A0E1BA9ECA4B525774433C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +102,31 @@
 				F0A94ED492F54DB1EDC74C43 /* TuistBundle+Weather.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		385BE9502BAF0CC400ADE13C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				385BE9512BAF0CD900ADE13C /* Location.swift */,
+				385BE9562BAF154400ADE13C /* Weather.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		385BE9532BAF0D2A00ADE13C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				385BE9542BAF0D3900ADE13C /* FetchManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		385BE9582BAF165D00ADE13C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				385BE9592BAF167600ADE13C /* ConvertCoord.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		44C84766D9BB2674FACECF92 /* Derived */ = {
@@ -159,9 +194,10 @@
 			isa = PBXGroup;
 			children = (
 				680954893D64B1C7DD0D53AA /* Preview Content */,
-				3830C2612BAF089F00246E8C /* Locations.csv */,
 				3C5F4EB8F96BECD520C89EF6 /* Assets.xcassets */,
 				BA35FCB22C9F3B5049C69C8F /* LaunchScreen.storyboard */,
+				38DE8D862BB04FD100FE078F /* Locations_GPS.csv */,
+				38DE8D882BB04FD700FE078F /* Locations_Grid.csv */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -186,6 +222,9 @@
 		FAD5C208A6B24375E31D6A76 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				385BE9582BAF165D00ADE13C /* Utilities */,
+				385BE9532BAF0D2A00ADE13C /* Managers */,
+				385BE9502BAF0CC400ADE13C /* Models */,
 				A3A0E1BA9ECA4B525774433C /* ContentView.swift */,
 				E2866D415972583F867F7D1D /* WeatherApp.swift */,
 			);
@@ -239,6 +278,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					2B1A4605C273A6FD0729E927 = {
 						TestTargetID = 45CD8315A1AD1CFAAAD5F135;
@@ -278,8 +318,9 @@
 			files = (
 				BDC76E05460858DBEAD84D3D /* Assets.xcassets in Resources */,
 				A936ADF15D825506771808F2 /* LaunchScreen.storyboard in Resources */,
+				38DE8D872BB04FD100FE078F /* Locations_GPS.csv in Resources */,
+				38DE8D892BB04FD700FE078F /* Locations_Grid.csv in Resources */,
 				54B94E21444B57AF0978AB5B /* Preview Assets.xcassets in Resources */,
-				3830C2622BAF089F00246E8C /* Locations.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,8 +333,12 @@
 			files = (
 				6C58EC40DEABC7D32E28C012 /* TuistAssets+Weather.swift in Sources */,
 				76D18A466C5F17F49605292F /* TuistBundle+Weather.swift in Sources */,
+				385BE9552BAF0D3900ADE13C /* FetchManager.swift in Sources */,
 				127355D661960B1103DCEDFE /* ContentView.swift in Sources */,
+				385BE9522BAF0CD900ADE13C /* Location.swift in Sources */,
+				385BE95A2BAF167600ADE13C /* ConvertCoord.swift in Sources */,
 				883A28966EDEC9BC246DDD62 /* WeatherApp.swift in Sources */,
+				385BE9572BAF154400ADE13C /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +401,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -517,6 +563,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
