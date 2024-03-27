@@ -5,18 +5,33 @@ import Combine
 public struct ContentView: View {
     
     @ObservedObject var fetch = FetchManager()
+    
+    @State private var searchString = ""
+    var filtered: [(key: String, value: Location)] {
+        if self.searchString.isEmpty {
+            return self.fetch.locationsTuple.map { $0 }
+        } else {
+            return self.fetch.locationsTuple.filter {
+                $0.key.contains(self.searchString)
+            }
+        }
+    }
 
     public var body: some View {
-        
         NavigationView {
-            List(self.fetch.locationsTuple.map { $0 }, id: \.key) { location in
+            List(self.filtered, id: \.key) { tuple in
                 NavigationLink {
-                    self.detailView(location.value)
+                    self.detailView(tuple.value)
                 } label: {
-                    Text("\(location.key)")
+                    Text("\(tuple.key)")
                 }
             }
             .navigationTitle("지역 명")
+            .searchable(
+                text: $searchString,
+                placement: .navigationBarDrawer(displayMode: .always),
+                prompt: "지역 명"
+            )
         }
         .onAppear {
             self.fetch.loadLocationsFromCSV()
