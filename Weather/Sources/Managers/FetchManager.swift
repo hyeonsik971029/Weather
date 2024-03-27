@@ -12,10 +12,10 @@ import Combine
 
 class FetchManager: ObservableObject {
     
-    @Published var locationsArr = [Location]()
+    @Published var locationsTuple = [(key: String, value: Location)]()
     
     func loadLocationsFromCSV() {
-        if let path = Bundle.main.path(forResource: "Locations.GPS", ofType: "csv") {
+        if let path = Bundle.main.path(forResource: "Locations_Grid", ofType: "csv") {
             let url = URL(fileURLWithPath: path)
             do {
                 let data = try Data(contentsOf: url)
@@ -23,14 +23,13 @@ class FetchManager: ObservableObject {
                     let dataArr = dataEncoded
                         .components(separatedBy: "\r\n")
                         .map { $0.components(separatedBy: ",") }
+                    var tmpDic = [String: Location]()
                     for data in dataArr {
                         if data.count != 3 { continue }
-                        self.locationsArr.append(Location(
-                            name: data[0],
-                            latitude: data[1],
-                            longitude: data[2]
-                        ))
+                        tmpDic[data[0]] = Location(name: data[0], x: data[1], y: data[2])
                     }
+                    
+                    self.locationsTuple = tmpDic.sorted(by: { $0.key < $1.key })
                 }
             } catch {
                 print("Error reading CSV file: \(error.localizedDescription)")
@@ -40,6 +39,7 @@ class FetchManager: ObservableObject {
         }
     }
     
+    // 디코딩 키
     private let serviceKey = "Qj/YURB65hOyyUnblK1/I9xs1ivp4Tj2/OQuF83kkUD8b0Bc238c53hb2P99kwiNi9v90iTtzb+rMuVGChxvuA=="
     private let endpoint = "http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst"
     
@@ -84,15 +84,13 @@ class FetchManager: ObservableObject {
             }
         }
         let baseTime = URLQueryItem(name: "base_time", value: timeToString)
-        
-        let grid = ConvertCoord.shared.GPSToGrid(location)
-        let nx = URLQueryItem(name: "nx", value: grid.x)
-        let ny = URLQueryItem(name: "ny", value: grid.y)
+        let nx = URLQueryItem(name: "nx", value: location.x)
+        let ny = URLQueryItem(name: "ny", value: location.y)
         
         components.queryItems = [serviceKey, numOfRows, dataType, baseDate, baseTime, nx, ny]
-        if var queryString = components.string {
-            queryString = queryString.replacingOccurrences(of: "/", with: "%2F")
+        if var queryString = components.query {
             queryString = queryString.replacingOccurrences(of: "+", with: "%2B")
+            queryString = queryString.replacingOccurrences(of: "/", with: "%2F")
             
             components.percentEncodedQuery = queryString
         }

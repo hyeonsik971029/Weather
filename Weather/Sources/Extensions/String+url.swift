@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+extension String {
+    
+    /// urlQueryAllowed: ! $ & ' ( ) * + , - . / : ; = ? @ _ ~
+    var stringByAddingPercentEncoding: String {
+        return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? self
+    }
+}
