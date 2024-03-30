@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1090088A5F8153A7F024C3C1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75778B25DFA73A102CB2F31B /* Location.swift */; };
 		128DC5FF31E63C4D484B82D4 /* TuistAssets+WeatherGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882EF6D8F56FB303DD9A0DA /* TuistAssets+WeatherGrid.swift */; };
-		29D3D1F60E74E1857C32FF82 /* ConvertCoord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB27615A50989781B5669C3 /* ConvertCoord.swift */; };
 		314649B97F5EF5DE9B51BE58 /* TuistBundle+WeatherGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93A19D88E9E4BB1D10D2F9E /* TuistBundle+WeatherGrid.swift */; };
 		4CC4E2F1A12A6095443503F6 /* Locations_GPS.csv in Resources */ = {isa = PBXBuildFile; fileRef = 54512EDC7614D57A2E999FB0 /* Locations_GPS.csv */; };
 		525462F48D911ADB1DB678AB /* FetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFEFCD0D264B64DB3AA2E8 /* FetchManager.swift */; };
@@ -19,7 +18,6 @@
 		60D1D321A04B17CBC457E78A /* Locations_Grid.csv in Resources */ = {isa = PBXBuildFile; fileRef = D451D67E93FBB4478CB4D7B9 /* Locations_Grid.csv */; };
 		795A213FECC4B3DFB12977A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BA44D9515E66F8514BD11B /* Preview Assets.xcassets */; };
 		83264F16CE9974EF0FFE629E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E3A6C88A00554B6523E85 /* Weather.swift */; };
-		9B52909D388F9FFD4A582989 /* String+url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A87646F6CDA285834087B /* String+url.swift */; };
 		9BF87DC308121BCE74B0E2FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5F4EB8F96BECD520C89EF6 /* Assets.xcassets */; };
 		BF447EC2502CE2B2269AF0A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA35FCB22C9F3B5049C69C8F /* LaunchScreen.storyboard */; };
 		E6D630DC225C1A1E9B009060 /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2866D415972583F867F7D1D /* WeatherApp.swift */; };
@@ -62,21 +60,19 @@
 /* Begin PBXFileReference section */
 		2F5E3A6C88A00554B6523E85 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		35BCD74C11749C4C531E5447 /* weather-gridTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "weather-gridTests-Info.plist"; sourceTree = "<group>"; };
-		382A87646F6CDA285834087B /* String+url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+url.swift"; sourceTree = "<group>"; };
 		3C5F4EB8F96BECD520C89EF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51BA44D9515E66F8514BD11B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		54512EDC7614D57A2E999FB0 /* Locations_GPS.csv */ = {isa = PBXFileReference; path = Locations_GPS.csv; sourceTree = "<group>"; };
+		54512EDC7614D57A2E999FB0 /* Locations_GPS.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Locations_GPS.csv; sourceTree = "<group>"; };
 		6B75B74C17E039507D5D79BC /* weather-grid-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "weather-grid-Info.plist"; sourceTree = "<group>"; };
 		75778B25DFA73A102CB2F31B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		76DFEFCD0D264B64DB3AA2E8 /* FetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchManager.swift; sourceTree = "<group>"; };
 		861615173F962D489FAE976B /* weather_gridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weather_gridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F24807EB410CAB46C8D8DD /* weather_grid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather_grid.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FB27615A50989781B5669C3 /* ConvertCoord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCoord.swift; sourceTree = "<group>"; };
 		A3A0E1BA9ECA4B525774433C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BA35FCB22C9F3B5049C69C8F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C20A9424E382555BA0BD4DA6 /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
 		C882EF6D8F56FB303DD9A0DA /* TuistAssets+WeatherGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+WeatherGrid.swift"; sourceTree = "<group>"; };
-		D451D67E93FBB4478CB4D7B9 /* Locations_Grid.csv */ = {isa = PBXFileReference; path = Locations_Grid.csv; sourceTree = "<group>"; };
+		D451D67E93FBB4478CB4D7B9 /* Locations_Grid.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Locations_Grid.csv; sourceTree = "<group>"; };
 		D93A19D88E9E4BB1D10D2F9E /* TuistBundle+WeatherGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+WeatherGrid.swift"; sourceTree = "<group>"; };
 		DC80922DEADDB59D963DFBD3 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E2866D415972583F867F7D1D /* WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp.swift; sourceTree = "<group>"; };
@@ -110,14 +106,6 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		0E6EDE232FE616CF53F43423 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				382A87646F6CDA285834087B /* String+url.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		31EF1DE3E9F06269B73EDE35 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,14 +129,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		56B2E340A2E6C76DBFA485EB /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				9FB27615A50989781B5669C3 /* ConvertCoord.swift */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		680954893D64B1C7DD0D53AA /* Preview Content */ = {
@@ -237,10 +217,8 @@
 		FAD5C208A6B24375E31D6A76 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0E6EDE232FE616CF53F43423 /* Extensions */,
 				31EF1DE3E9F06269B73EDE35 /* Managers */,
 				ED36566D50FB18C0342E2BCA /* Models */,
-				56B2E340A2E6C76DBFA485EB /* Utilities */,
 				A3A0E1BA9ECA4B525774433C /* ContentView.swift */,
 				E2866D415972583F867F7D1D /* WeatherApp.swift */,
 			);
@@ -364,12 +342,10 @@
 				128DC5FF31E63C4D484B82D4 /* TuistAssets+WeatherGrid.swift in Sources */,
 				314649B97F5EF5DE9B51BE58 /* TuistBundle+WeatherGrid.swift in Sources */,
 				54044B4C975834884091ADEF /* ContentView.swift in Sources */,
-				9B52909D388F9FFD4A582989 /* String+url.swift in Sources */,
 				52A768F044450EBF4C9A32E4 /* DataManager.swift in Sources */,
 				525462F48D911ADB1DB678AB /* FetchManager.swift in Sources */,
 				1090088A5F8153A7F024C3C1 /* Location.swift in Sources */,
 				83264F16CE9974EF0FFE629E /* Weather.swift in Sources */,
-				29D3D1F60E74E1857C32FF82 /* ConvertCoord.swift in Sources */,
 				E6D630DC225C1A1E9B009060 /* WeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,10 +489,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -544,10 +517,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
