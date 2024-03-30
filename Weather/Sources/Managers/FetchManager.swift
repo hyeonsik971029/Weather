@@ -9,33 +9,45 @@ import Foundation
 
 import Combine
 
-
 class FetchManager: ObservableObject {
     
-    @Published var locationsTuple = [(key: String, value: Location)]()
+    @Published var locationsArr = [Location]()
     
     func loadLocationsFromCSV() {
-        if let path = Bundle.main.path(forResource: "Locations_Grid", ofType: "csv") {
-            let url = URL(fileURLWithPath: path)
-            do {
-                let data = try Data(contentsOf: url)
-                if let dataEncoded = String(data: data, encoding: .utf8) {
-                    let dataArr = dataEncoded
-                        .components(separatedBy: "\r\n")
-                        .map { $0.components(separatedBy: ",") }
-                    var tmpDic = [String: Location]()
-                    for data in dataArr {
-                        if data.count != 3 { continue }
-                        tmpDic[data[0]] = Location(name: data[0], x: data[1], y: data[2])
+        if DataManager.shared.isLocationsEmpty("Locations") {
+            if let path = Bundle.main.path(forResource: "Locations_Grid", ofType: "csv") {
+                let url = URL(fileURLWithPath: path)
+                do {
+                    let data = try Data(contentsOf: url)
+                    if let dataEncoded = String(data: data, encoding: .utf8) {
+                        let dataArr = dataEncoded
+                            .components(separatedBy: "\r\n")
+                            .map { $0.components(separatedBy: ",") }
+                        for data in dataArr {
+                            if data.count != 3 { continue }
+                            self.locationsArr.append(Location(
+                                name: data[0],
+                                x: data[1],
+                                y: data[2],
+                                favorites: false
+                            ))
+                        }
+                        
+                        if DataManager.shared.isLocationsEmpty("Locations") {
+                            DataManager.shared.saveLocations(
+                                "Locations",
+                                locations: self.locationsArr
+                            )
+                        }
                     }
-                    
-                    self.locationsTuple = tmpDic.sorted(by: { $0.key < $1.key })
+                } catch {
+                    print("Error reading CSV file: \(error.localizedDescription)")
                 }
-            } catch {
-                print("Error reading CSV file: \(error.localizedDescription)")
+            } else {
+                print("CSV file not found.")
             }
         } else {
-            print("CSV file not found.")
+            self.locationsArr = DataManager.shared.loadLocations("Locations")
         }
     }
     

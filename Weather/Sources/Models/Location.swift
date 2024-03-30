@@ -7,11 +7,13 @@
 
 import Foundation
 
-struct Location {
+struct Location: Codable {
     /// 지역 이름
     let name: String
     /// Grid X
     let x: String
     /// Grid Y
     let y: String
+    /// 즐겨찾기
+    var favorites: Bool
 }
