@@ -3,39 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		127355D661960B1103DCEDFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A0E1BA9ECA4B525774433C /* ContentView.swift */; };
-		153272102E0C2BC7B55E7668 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20A9424E382555BA0BD4DA6 /* WeatherTests.swift */; };
-		385BE9522BAF0CD900ADE13C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385BE9512BAF0CD900ADE13C /* Location.swift */; };
-		385BE9552BAF0D3900ADE13C /* FetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385BE9542BAF0D3900ADE13C /* FetchManager.swift */; };
-		385BE9572BAF154400ADE13C /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385BE9562BAF154400ADE13C /* Weather.swift */; };
-		385BE95A2BAF167600ADE13C /* ConvertCoord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385BE9592BAF167600ADE13C /* ConvertCoord.swift */; };
-		38DE8D872BB04FD100FE078F /* Locations_GPS.csv in Resources */ = {isa = PBXBuildFile; fileRef = 38DE8D862BB04FD100FE078F /* Locations_GPS.csv */; };
-		38DE8D892BB04FD700FE078F /* Locations_Grid.csv in Resources */ = {isa = PBXBuildFile; fileRef = 38DE8D882BB04FD700FE078F /* Locations_Grid.csv */; };
-		38EA82A12BB130F400F4439D /* String+url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EA82A02BB130F400F4439D /* String+url.swift */; };
-		54B94E21444B57AF0978AB5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BA44D9515E66F8514BD11B /* Preview Assets.xcassets */; };
-		6C58EC40DEABC7D32E28C012 /* TuistAssets+Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C3BCCA2AB598FA95B41CF0 /* TuistAssets+Weather.swift */; };
-		76D18A466C5F17F49605292F /* TuistBundle+Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A94ED492F54DB1EDC74C43 /* TuistBundle+Weather.swift */; };
-		883A28966EDEC9BC246DDD62 /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2866D415972583F867F7D1D /* WeatherApp.swift */; };
-		A936ADF15D825506771808F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA35FCB22C9F3B5049C69C8F /* LaunchScreen.storyboard */; };
-		BDC76E05460858DBEAD84D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5F4EB8F96BECD520C89EF6 /* Assets.xcassets */; };
+		1090088A5F8153A7F024C3C1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75778B25DFA73A102CB2F31B /* Location.swift */; };
+		128DC5FF31E63C4D484B82D4 /* TuistAssets+WeatherGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882EF6D8F56FB303DD9A0DA /* TuistAssets+WeatherGrid.swift */; };
+		29D3D1F60E74E1857C32FF82 /* ConvertCoord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB27615A50989781B5669C3 /* ConvertCoord.swift */; };
+		314649B97F5EF5DE9B51BE58 /* TuistBundle+WeatherGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93A19D88E9E4BB1D10D2F9E /* TuistBundle+WeatherGrid.swift */; };
+		4CC4E2F1A12A6095443503F6 /* Locations_GPS.csv in Resources */ = {isa = PBXBuildFile; fileRef = 54512EDC7614D57A2E999FB0 /* Locations_GPS.csv */; };
+		525462F48D911ADB1DB678AB /* FetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFEFCD0D264B64DB3AA2E8 /* FetchManager.swift */; };
+		52A768F044450EBF4C9A32E4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC80922DEADDB59D963DFBD3 /* DataManager.swift */; };
+		54044B4C975834884091ADEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A0E1BA9ECA4B525774433C /* ContentView.swift */; };
+		59209B2AAE35138DD9C699AF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C7A5E888AC315A81F62A4C22 /* ComposableArchitecture */; };
+		60D1D321A04B17CBC457E78A /* Locations_Grid.csv in Resources */ = {isa = PBXBuildFile; fileRef = D451D67E93FBB4478CB4D7B9 /* Locations_Grid.csv */; };
+		795A213FECC4B3DFB12977A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BA44D9515E66F8514BD11B /* Preview Assets.xcassets */; };
+		83264F16CE9974EF0FFE629E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E3A6C88A00554B6523E85 /* Weather.swift */; };
+		9B52909D388F9FFD4A582989 /* String+url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A87646F6CDA285834087B /* String+url.swift */; };
+		9BF87DC308121BCE74B0E2FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5F4EB8F96BECD520C89EF6 /* Assets.xcassets */; };
+		BF447EC2502CE2B2269AF0A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA35FCB22C9F3B5049C69C8F /* LaunchScreen.storyboard */; };
+		E6D630DC225C1A1E9B009060 /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2866D415972583F867F7D1D /* WeatherApp.swift */; };
+		F4D4683D180EEE71894EF1EA /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20A9424E382555BA0BD4DA6 /* WeatherTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AC8C997189C69DF0BC5DF8B9 /* PBXContainerItemProxy */ = {
+		DA5B4129A389F0A92DCEE252 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6359DD3CB564CBC7F75B5385 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 45CD8315A1AD1CFAAAD5F135;
-			remoteInfo = Weather;
+			remoteGlobalIDString = 0DE4BD2D41E0833FA07536D6;
+			remoteInfo = "weather-grid";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		35F8837CC70CE1DF4EF71738 /* Embed Frameworks */ = {
+		7FAFB5E33969731040C935A3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
@@ -45,7 +47,7 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6D6D229BD3CB5D8472F31BB1 /* Embed Frameworks */ = {
+		CD00536562129001989B285E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
@@ -58,36 +60,38 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1DF4E92D9804B891D7197E71 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		385BE9512BAF0CD900ADE13C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		385BE9542BAF0D3900ADE13C /* FetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchManager.swift; sourceTree = "<group>"; };
-		385BE9562BAF154400ADE13C /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		385BE9592BAF167600ADE13C /* ConvertCoord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCoord.swift; sourceTree = "<group>"; };
-		38DE8D862BB04FD100FE078F /* Locations_GPS.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Locations_GPS.csv; sourceTree = "<group>"; };
-		38DE8D882BB04FD700FE078F /* Locations_Grid.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Locations_Grid.csv; sourceTree = "<group>"; };
-		38EA82A02BB130F400F4439D /* String+url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+url.swift"; sourceTree = "<group>"; };
+		2F5E3A6C88A00554B6523E85 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		35BCD74C11749C4C531E5447 /* weather-gridTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "weather-gridTests-Info.plist"; sourceTree = "<group>"; };
+		382A87646F6CDA285834087B /* String+url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+url.swift"; sourceTree = "<group>"; };
 		3C5F4EB8F96BECD520C89EF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51BA44D9515E66F8514BD11B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		54512EDC7614D57A2E999FB0 /* Locations_GPS.csv */ = {isa = PBXFileReference; path = Locations_GPS.csv; sourceTree = "<group>"; };
+		6B75B74C17E039507D5D79BC /* weather-grid-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "weather-grid-Info.plist"; sourceTree = "<group>"; };
+		75778B25DFA73A102CB2F31B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		76DFEFCD0D264B64DB3AA2E8 /* FetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchManager.swift; sourceTree = "<group>"; };
+		861615173F962D489FAE976B /* weather_gridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weather_gridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F24807EB410CAB46C8D8DD /* weather_grid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather_grid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FB27615A50989781B5669C3 /* ConvertCoord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCoord.swift; sourceTree = "<group>"; };
 		A3A0E1BA9ECA4B525774433C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BA35FCB22C9F3B5049C69C8F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C20A9424E382555BA0BD4DA6 /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
-		C4A572ABF5E50511ACECAD33 /* Weather-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Weather-Info.plist"; sourceTree = "<group>"; };
-		C5B73B7CC41D57F2D7B4E40E /* WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E128D92945844ECD44E58413 /* WeatherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WeatherTests-Info.plist"; sourceTree = "<group>"; };
-		E1C3BCCA2AB598FA95B41CF0 /* TuistAssets+Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Weather.swift"; sourceTree = "<group>"; };
+		C882EF6D8F56FB303DD9A0DA /* TuistAssets+WeatherGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+WeatherGrid.swift"; sourceTree = "<group>"; };
+		D451D67E93FBB4478CB4D7B9 /* Locations_Grid.csv */ = {isa = PBXFileReference; path = Locations_Grid.csv; sourceTree = "<group>"; };
+		D93A19D88E9E4BB1D10D2F9E /* TuistBundle+WeatherGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+WeatherGrid.swift"; sourceTree = "<group>"; };
+		DC80922DEADDB59D963DFBD3 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E2866D415972583F867F7D1D /* WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp.swift; sourceTree = "<group>"; };
-		F0A94ED492F54DB1EDC74C43 /* TuistBundle+Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Weather.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5BD6EE0F0D0D14676AD152D7 /* Frameworks */ = {
+		CAF2E44E944055F4B87CFD21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59209B2AAE35138DD9C699AF /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD7F9B3F99DED310FDC37749 /* Frameworks */ = {
+		EF319685387AD8DBCBF17F59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -100,43 +104,27 @@
 		00285F2B181900FB4ECCF592 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E1C3BCCA2AB598FA95B41CF0 /* TuistAssets+Weather.swift */,
-				F0A94ED492F54DB1EDC74C43 /* TuistBundle+Weather.swift */,
+				C882EF6D8F56FB303DD9A0DA /* TuistAssets+WeatherGrid.swift */,
+				D93A19D88E9E4BB1D10D2F9E /* TuistBundle+WeatherGrid.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		385BE9502BAF0CC400ADE13C /* Models */ = {
+		0E6EDE232FE616CF53F43423 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				385BE9512BAF0CD900ADE13C /* Location.swift */,
-				385BE9562BAF154400ADE13C /* Weather.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		385BE9532BAF0D2A00ADE13C /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				385BE9542BAF0D3900ADE13C /* FetchManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		385BE9582BAF165D00ADE13C /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				385BE9592BAF167600ADE13C /* ConvertCoord.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		38EA829F2BB130E200F4439D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				38EA82A02BB130F400F4439D /* String+url.swift */,
+				382A87646F6CDA285834087B /* String+url.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		31EF1DE3E9F06269B73EDE35 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DC80922DEADDB59D963DFBD3 /* DataManager.swift */,
+				76DFEFCD0D264B64DB3AA2E8 /* FetchManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		44C84766D9BB2674FACECF92 /* Derived */ = {
@@ -153,6 +141,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56B2E340A2E6C76DBFA485EB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9FB27615A50989781B5669C3 /* ConvertCoord.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		680954893D64B1C7DD0D53AA /* Preview Content */ = {
@@ -194,8 +190,8 @@
 		C827F022EE41AC34D2720FD8 /* InfoPlists */ = {
 			isa = PBXGroup;
 			children = (
-				C4A572ABF5E50511ACECAD33 /* Weather-Info.plist */,
-				E128D92945844ECD44E58413 /* WeatherTests-Info.plist */,
+				6B75B74C17E039507D5D79BC /* weather-grid-Info.plist */,
+				35BCD74C11749C4C531E5447 /* weather-gridTests-Info.plist */,
 			);
 			path = InfoPlists;
 			sourceTree = "<group>";
@@ -206,8 +202,8 @@
 				680954893D64B1C7DD0D53AA /* Preview Content */,
 				3C5F4EB8F96BECD520C89EF6 /* Assets.xcassets */,
 				BA35FCB22C9F3B5049C69C8F /* LaunchScreen.storyboard */,
-				38DE8D862BB04FD100FE078F /* Locations_GPS.csv */,
-				38DE8D882BB04FD700FE078F /* Locations_Grid.csv */,
+				54512EDC7614D57A2E999FB0 /* Locations_GPS.csv */,
+				D451D67E93FBB4478CB4D7B9 /* Locations_Grid.csv */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -215,10 +211,19 @@
 		EAFAA58F195D6F56A3681DC6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1DF4E92D9804B891D7197E71 /* Weather.app */,
-				C5B73B7CC41D57F2D7B4E40E /* WeatherTests.xctest */,
+				99F24807EB410CAB46C8D8DD /* weather_grid.app */,
+				861615173F962D489FAE976B /* weather_gridTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		ED36566D50FB18C0342E2BCA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75778B25DFA73A102CB2F31B /* Location.swift */,
+				2F5E3A6C88A00554B6523E85 /* Weather.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F91B975016413E07AEE20B3B /* Tests */ = {
@@ -232,10 +237,10 @@
 		FAD5C208A6B24375E31D6A76 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				38EA829F2BB130E200F4439D /* Extensions */,
-				385BE9582BAF165D00ADE13C /* Utilities */,
-				385BE9532BAF0D2A00ADE13C /* Managers */,
-				385BE9502BAF0CC400ADE13C /* Models */,
+				0E6EDE232FE616CF53F43423 /* Extensions */,
+				31EF1DE3E9F06269B73EDE35 /* Managers */,
+				ED36566D50FB18C0342E2BCA /* Models */,
+				56B2E340A2E6C76DBFA485EB /* Utilities */,
 				A3A0E1BA9ECA4B525774433C /* ContentView.swift */,
 				E2866D415972583F867F7D1D /* WeatherApp.swift */,
 			);
@@ -245,42 +250,45 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2B1A4605C273A6FD0729E927 /* WeatherTests */ = {
+		0DE4BD2D41E0833FA07536D6 /* weather-grid */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5632B28E0EA0C3C19224854 /* Build configuration list for PBXNativeTarget "WeatherTests" */;
+			buildConfigurationList = 2A1CB9CC19B966794B893006 /* Build configuration list for PBXNativeTarget "weather-grid" */;
 			buildPhases = (
-				54055DEC79FC5871396D7701 /* Sources */,
-				B255C8436D346144C0C18B54 /* Resources */,
-				6D6D229BD3CB5D8472F31BB1 /* Embed Frameworks */,
-				BD7F9B3F99DED310FDC37749 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E3D877AC5D4374F4C62FF722 /* PBXTargetDependency */,
-			);
-			name = WeatherTests;
-			productName = WeatherTests;
-			productReference = C5B73B7CC41D57F2D7B4E40E /* WeatherTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		45CD8315A1AD1CFAAAD5F135 /* Weather */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7ABCB454428DFDCCE1513E99 /* Build configuration list for PBXNativeTarget "Weather" */;
-			buildPhases = (
-				180F8B77734C82C147B6B367 /* Sources */,
-				EE177338D2AADFDCDBD9F2B6 /* Resources */,
-				35F8837CC70CE1DF4EF71738 /* Embed Frameworks */,
-				5BD6EE0F0D0D14676AD152D7 /* Frameworks */,
+				FD688A813FA8FE976892C949 /* Sources */,
+				09F1DF7A9DCFBC51843351DE /* Resources */,
+				CD00536562129001989B285E /* Embed Frameworks */,
+				CAF2E44E944055F4B87CFD21 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Weather;
-			productName = Weather;
-			productReference = 1DF4E92D9804B891D7197E71 /* Weather.app */;
+			name = "weather-grid";
+			packageProductDependencies = (
+				C7A5E888AC315A81F62A4C22 /* ComposableArchitecture */,
+			);
+			productName = weather_grid;
+			productReference = 99F24807EB410CAB46C8D8DD /* weather_grid.app */;
 			productType = "com.apple.product-type.application";
+		};
+		829A510A6F77DBC3075FB433 /* weather-gridTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3061A4505F94CD569BE565DD /* Build configuration list for PBXNativeTarget "weather-gridTests" */;
+			buildPhases = (
+				3B0F437F8C2CC42CB5C40CAA /* Sources */,
+				12A29C600CA5CFDF0CE187FA /* Resources */,
+				7FAFB5E33969731040C935A3 /* Embed Frameworks */,
+				EF319685387AD8DBCBF17F59 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7459A0A7FA59079C92AC356C /* PBXTargetDependency */,
+			);
+			name = "weather-gridTests";
+			productName = weather_gridTests;
+			productReference = 861615173F962D489FAE976B /* weather_gridTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -289,10 +297,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1530;
+				ORGANIZATIONNAME = "weather-ios";
 				TargetAttributes = {
-					2B1A4605C273A6FD0729E927 = {
-						TestTargetID = 45CD8315A1AD1CFAAAD5F135;
+					829A510A6F77DBC3075FB433 = {
+						TestTargetID = 0DE4BD2D41E0833FA07536D6;
 					};
 				};
 			};
@@ -305,75 +313,105 @@
 				en,
 			);
 			mainGroup = 980CE069C9D8D6DF46D5BEA0;
+			packageReferences = (
+				FFDA49CAA4E18049BE4B151D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = EAFAA58F195D6F56A3681DC6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				45CD8315A1AD1CFAAAD5F135 /* Weather */,
-				2B1A4605C273A6FD0729E927 /* WeatherTests */,
+				0DE4BD2D41E0833FA07536D6 /* weather-grid */,
+				829A510A6F77DBC3075FB433 /* weather-gridTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B255C8436D346144C0C18B54 /* Resources */ = {
+		09F1DF7A9DCFBC51843351DE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF87DC308121BCE74B0E2FB /* Assets.xcassets in Resources */,
+				BF447EC2502CE2B2269AF0A7 /* LaunchScreen.storyboard in Resources */,
+				4CC4E2F1A12A6095443503F6 /* Locations_GPS.csv in Resources */,
+				60D1D321A04B17CBC457E78A /* Locations_Grid.csv in Resources */,
+				795A213FECC4B3DFB12977A3 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EE177338D2AADFDCDBD9F2B6 /* Resources */ = {
+		12A29C600CA5CFDF0CE187FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDC76E05460858DBEAD84D3D /* Assets.xcassets in Resources */,
-				A936ADF15D825506771808F2 /* LaunchScreen.storyboard in Resources */,
-				38DE8D872BB04FD100FE078F /* Locations_GPS.csv in Resources */,
-				38DE8D892BB04FD700FE078F /* Locations_Grid.csv in Resources */,
-				54B94E21444B57AF0978AB5B /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		180F8B77734C82C147B6B367 /* Sources */ = {
+		3B0F437F8C2CC42CB5C40CAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C58EC40DEABC7D32E28C012 /* TuistAssets+Weather.swift in Sources */,
-				38EA82A12BB130F400F4439D /* String+url.swift in Sources */,
-				76D18A466C5F17F49605292F /* TuistBundle+Weather.swift in Sources */,
-				385BE9552BAF0D3900ADE13C /* FetchManager.swift in Sources */,
-				127355D661960B1103DCEDFE /* ContentView.swift in Sources */,
-				385BE9522BAF0CD900ADE13C /* Location.swift in Sources */,
-				385BE95A2BAF167600ADE13C /* ConvertCoord.swift in Sources */,
-				883A28966EDEC9BC246DDD62 /* WeatherApp.swift in Sources */,
-				385BE9572BAF154400ADE13C /* Weather.swift in Sources */,
+				F4D4683D180EEE71894EF1EA /* WeatherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		54055DEC79FC5871396D7701 /* Sources */ = {
+		FD688A813FA8FE976892C949 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				153272102E0C2BC7B55E7668 /* WeatherTests.swift in Sources */,
+				128DC5FF31E63C4D484B82D4 /* TuistAssets+WeatherGrid.swift in Sources */,
+				314649B97F5EF5DE9B51BE58 /* TuistBundle+WeatherGrid.swift in Sources */,
+				54044B4C975834884091ADEF /* ContentView.swift in Sources */,
+				9B52909D388F9FFD4A582989 /* String+url.swift in Sources */,
+				52A768F044450EBF4C9A32E4 /* DataManager.swift in Sources */,
+				525462F48D911ADB1DB678AB /* FetchManager.swift in Sources */,
+				1090088A5F8153A7F024C3C1 /* Location.swift in Sources */,
+				83264F16CE9974EF0FFE629E /* Weather.swift in Sources */,
+				29D3D1F60E74E1857C32FF82 /* ConvertCoord.swift in Sources */,
+				E6D630DC225C1A1E9B009060 /* WeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E3D877AC5D4374F4C62FF722 /* PBXTargetDependency */ = {
+		7459A0A7FA59079C92AC356C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Weather;
-			target = 45CD8315A1AD1CFAAAD5F135 /* Weather */;
-			targetProxy = AC8C997189C69DF0BC5DF8B9 /* PBXContainerItemProxy */;
+			name = "weather-grid";
+			target = 0DE4BD2D41E0833FA07536D6 /* weather-grid */;
+			targetProxy = DA5B4129A389F0A92DCEE252 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		337AC5E7A5E06D7878119062 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/weather-gridTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonsik.WeatherTests;
+				PRODUCT_NAME = weather_gridTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/weather_grid.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/weather_grid";
+				TEST_TARGET_NAME = "weather-grid";
+			};
+			name = Release;
+		};
 		37596FAF292884D1465B1713 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -413,7 +451,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -434,105 +471,87 @@
 			};
 			name = Debug;
 		};
-		58D74D5FF78E369C42427231 /* Debug */ = {
+		4B2429922AC8084D2BC01300 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Derived/InfoPlists/Weather-Info.plist";
+				INFOPLIST_FILE = "Derived/InfoPlists/weather-grid-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.Weather;
-				PRODUCT_NAME = Weather;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonsik.Weather;
+				PRODUCT_NAME = weather_grid;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A77DD54B180CC6C36F01BDD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/weather-gridTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonsik.WeatherTests;
+				PRODUCT_NAME = weather_gridTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/weather_grid.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/weather_grid";
+				TEST_TARGET_NAME = "weather-grid";
 			};
 			name = Debug;
 		};
-		88B9F4187A78D17252870015 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Derived/InfoPlists/WeatherTests-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.WeatherTests;
-				PRODUCT_NAME = WeatherTests;
-				SDKROOT = iphoneos;
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Weather";
-				TEST_TARGET_NAME = Weather;
-			};
-			name = Release;
-		};
-		925A875C50817E7E5ED70467 /* Release */ = {
+		C95D0D32FED1254B1971E6FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Derived/InfoPlists/Weather-Info.plist";
+				INFOPLIST_FILE = "Derived/InfoPlists/weather-grid-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.Weather;
-				PRODUCT_NAME = Weather;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonsik.Weather;
+				PRODUCT_NAME = weather_grid;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		F595CA07725713BA1604CA05 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Derived/InfoPlists/WeatherTests-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					DEBUG,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.WeatherTests;
-				PRODUCT_NAME = WeatherTests;
-				SDKROOT = iphoneos;
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Weather";
-				TEST_TARGET_NAME = Weather;
 			};
 			name = Debug;
 		};
@@ -575,7 +594,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -593,11 +611,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7ABCB454428DFDCCE1513E99 /* Build configuration list for PBXNativeTarget "Weather" */ = {
+		2A1CB9CC19B966794B893006 /* Build configuration list for PBXNativeTarget "weather-grid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				58D74D5FF78E369C42427231 /* Debug */,
-				925A875C50817E7E5ED70467 /* Release */,
+				C95D0D32FED1254B1971E6FE /* Debug */,
+				4B2429922AC8084D2BC01300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3061A4505F94CD569BE565DD /* Build configuration list for PBXNativeTarget "weather-gridTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A77DD54B180CC6C36F01BDD5 /* Debug */,
+				337AC5E7A5E06D7878119062 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -611,16 +638,25 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5632B28E0EA0C3C19224854 /* Build configuration list for PBXNativeTarget "WeatherTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F595CA07725713BA1604CA05 /* Debug */,
-				88B9F4187A78D17252870015 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FFDA49CAA4E18049BE4B151D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7A5E888AC315A81F62A4C22 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6359DD3CB564CBC7F75B5385 /* Project object */;
 }

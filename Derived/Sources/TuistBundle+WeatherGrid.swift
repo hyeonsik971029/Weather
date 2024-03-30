@@ -8,14 +8,14 @@ import Foundation
 private class BundleFinder {}
 
 extension Foundation.Bundle {
-/// Since Weather is a application, the bundle for classes within this module can be used directly.
+/// Since weather-grid is a application, the bundle for classes within this module can be used directly.
 static let module = Bundle(for: BundleFinder.self)
 }
 
 // MARK: - Objective-C Bundle Accessor
 
 @objc
-public class WeatherResources: NSObject {
+public class WeatherGridResources: NSObject {
 @objc public class var bundle: Bundle {
     return .module
 }

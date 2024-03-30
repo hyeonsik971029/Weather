@@ -19,9 +19,11 @@
 // MARK: - Asset Catalogs
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
-public enum WeatherAsset {
+public enum WeatherGridAsset {
   public enum Assets {
-  public static let accentColor = WeatherColors(name: "AccentColor")
+  public static let accentColor = WeatherGridColors(name: "AccentColor")
+    public static let iconStarEmpty = WeatherGridImages(name: "icon_star_empty")
+    public static let iconStarFill = WeatherGridImages(name: "icon_star_fill")
   }
   public enum PreviewAssets {
   }
@@ -30,7 +32,7 @@ public enum WeatherAsset {
 
 // MARK: - Implementation Details
 
-public final class WeatherColors {
+public final class WeatherGridColors {
   public fileprivate(set) var name: String
 
   #if os(macOS)
@@ -69,10 +71,10 @@ public final class WeatherColors {
   }
 }
 
-public extension WeatherColors.Color {
+public extension WeatherGridColors.Color {
   @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, visionOS 1.0, *)
-  convenience init?(asset: WeatherColors) {
-    let bundle = WeatherResources.bundle
+  convenience init?(asset: WeatherGridColors) {
+    let bundle = WeatherGridResources.bundle
     #if os(iOS) || os(tvOS) || os(visionOS)
     self.init(named: asset.name, in: bundle, compatibleWith: nil)
     #elseif os(macOS)
@@ -86,9 +88,61 @@ public extension WeatherColors.Color {
 #if canImport(SwiftUI)
 @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, visionOS 1.0, *)
 public extension SwiftUI.Color {
-  init(asset: WeatherColors) {
-    let bundle = WeatherResources.bundle
+  init(asset: WeatherGridColors) {
+    let bundle = WeatherGridResources.bundle
     self.init(asset.name, bundle: bundle)
+  }
+}
+#endif
+
+public struct WeatherGridImages {
+  public fileprivate(set) var name: String
+
+  #if os(macOS)
+  public typealias Image = NSImage
+  #elseif os(iOS) || os(tvOS) || os(watchOS) || os(visionOS)
+  public typealias Image = UIImage
+  #endif
+
+  public var image: Image {
+    let bundle = WeatherGridResources.bundle
+    #if os(iOS) || os(tvOS) || os(visionOS)
+    let image = Image(named: name, in: bundle, compatibleWith: nil)
+    #elseif os(macOS)
+    let image = bundle.image(forResource: NSImage.Name(name))
+    #elseif os(watchOS)
+    let image = Image(named: name)
+    #endif
+    guard let result = image else {
+      fatalError("Unable to load image asset named \(name).")
+    }
+    return result
+  }
+
+  #if canImport(SwiftUI)
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, visionOS 1.0, *)
+  public var swiftUIImage: SwiftUI.Image {
+    SwiftUI.Image(asset: self)
+  }
+  #endif
+}
+
+#if canImport(SwiftUI)
+@available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, visionOS 1.0, *)
+public extension SwiftUI.Image {
+  init(asset: WeatherGridImages) {
+    let bundle = WeatherGridResources.bundle
+    self.init(asset.name, bundle: bundle)
+  }
+
+  init(asset: WeatherGridImages, label: Text) {
+    let bundle = WeatherGridResources.bundle
+    self.init(asset.name, bundle: bundle, label: label)
+  }
+
+  init(decorative asset: WeatherGridImages) {
+    let bundle = WeatherGridResources.bundle
+    self.init(decorative: asset.name, bundle: bundle)
   }
 }
 #endif
