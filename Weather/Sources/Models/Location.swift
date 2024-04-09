@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Location: Codable {
+struct Location: Codable, Equatable {
     /// 지역 이름
     let name: String
     /// Grid X
