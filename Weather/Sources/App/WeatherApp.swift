@@ -2,6 +2,7 @@ import SwiftUI
 
 import ComposableArchitecture
 
+
 @main
 struct WeatherApp: App {
     static let store = Store(initialState: LocationsFeature.State()) {

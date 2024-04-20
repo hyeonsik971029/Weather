@@ -11,7 +11,8 @@ protocol ProjectFactory {
 class BaseProjectFactory: ProjectFactory {
     
     let appName: String = "Weather"
-    let targetName: String = "weather-grid"
+    let targetNameWithPublicData: String = "weather-grid"
+    let targetNameWithWeatherKit: String = "weather-locaion"
     let projectName: String = "weather-ios"
     
     let infoPlist: [String: ProjectDescription.Plist.Value] = [
@@ -34,10 +35,21 @@ class BaseProjectFactory: ProjectFactory {
         .package(product: "ComposableArchitecture", type: .runtime)
     ]
     
+    let settingsWithWeatherKit: Settings = {
+        .settings(configurations: [
+            .debug(name: "weather-grid")
+        ])
+    }()
+    let settingsWithPublicData: Settings = {
+        .settings(configurations: [
+            .debug(name: "weather-location")
+        ])
+    }()
+    
     func target() -> [Target] {
         [
             .target(
-                name: targetName,
+                name: targetNameWithPublicData,
                 destinations: .iOS,
                 product: .app,
                 bundleId: "com.hyeonsik.\(appName)",
@@ -45,17 +57,40 @@ class BaseProjectFactory: ProjectFactory {
                 infoPlist: .extendingDefault(with: infoPlist),
                 sources: ["Weather/Sources/**"],
                 resources: ["Weather/Resources/**"],
-                dependencies: dependencies
+                dependencies: dependencies,
+                settings: settingsWithPublicData
             ),
             .target(
-                name: "\(targetName)Tests",
+                name: "\(targetNameWithPublicData)Tests",
                 destinations: .iOS,
                 product: .unitTests,
                 bundleId: "com.hyeonsik.\(appName)Tests",
                 infoPlist: .default,
                 sources: ["Weather/Tests/**"],
                 resources: [],
-                dependencies: [.target(name: targetName)]
+                dependencies: [.target(name: targetNameWithPublicData)]
+            ),
+            .target(
+                name: targetNameWithWeatherKit,
+                destinations: .iOS,
+                product: .app,
+                bundleId: "com.hyeonsik.\(appName)",
+                deploymentTargets: .iOS("15.0"),
+                infoPlist: .extendingDefault(with: infoPlist),
+                sources: ["Weather/Sources/**"],
+                resources: ["Weather/Resources/**"],
+                dependencies: dependencies,
+                settings: settingsWithWeatherKit
+            ),
+            .target(
+                name: "\(targetNameWithWeatherKit)Tests",
+                destinations: .iOS,
+                product: .unitTests,
+                bundleId: "com.hyeonsik.\(appName)Tests",
+                infoPlist: .default,
+                sources: ["Weather/Tests/**"],
+                resources: [],
+                dependencies: [.target(name: targetNameWithWeatherKit)]
             )
         ]
     }

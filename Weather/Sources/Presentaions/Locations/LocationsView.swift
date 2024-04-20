@@ -45,9 +45,9 @@ struct LocationsView: View {
         })
     }
     
-    @State private var isFavorites = false
-    
     func detailView(_ location: Location) -> some View {
+        
+        var isFavorites = location.favorites
         
         var body: some View {
             WithPerceptionTracking(content: {
@@ -59,7 +59,7 @@ struct LocationsView: View {
                         Text("최저: \(store.temperature.tmn) 최대: \(store.temperature.tmx)")
                     }
                     .onAppear {
-                        self.store.send(.loadWeather(location))
+                        store.send(.loadWeather(location))
                     }
                     
                     // 즐겨찾기
@@ -67,11 +67,11 @@ struct LocationsView: View {
                         isFavorites.toggle()
                         store.send(.updateFavorites(isFavorites))
                     }, label: {
-                        Image(isFavorites ? "icon_star_fill": "icon_star_empty")
+                        Image(store.isFavorites ? "icon_star_fill": "icon_star_empty")
                             .resizable()
                             .frame(width: 50, height: 50)
                             .onAppear {
-                                isFavorites = location.favorites
+                                store.send(.updateFavorites(isFavorites))
                             }
                             .onDisappear {
                                 searchText = ""
