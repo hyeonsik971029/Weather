@@ -13,5 +13,5 @@ public protocol LocationInfoListRepository {
     func locationInfoListBySimpleDefaults() -> [LocationInfo]
     func locationInfoList() -> [LocationInfo]
     
-    func updateFavorites(name: String, favorites: Bool)
+    func update(_ locationInfo: LocationInfo)
 }

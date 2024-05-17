@@ -16,22 +16,29 @@ import ComposableArchitecture
 public struct LocationInfoCellFeature {
     @ObservableState
     public struct State: Equatable, Identifiable {
-        public let id: UUID
+        public var id: UUID
         public var locationInfo: LocationInfo
-        public var temperature: String
         
-        public init() {
+        public init(locationInfo: LocationInfo) {
             self.id = UUID()
-            self.locationInfo = LocationInfo()
-            self.temperature = ""
+            self.locationInfo = locationInfo
         }
     }
     
-    public enum Action: BindableAction, Sendable {
+    public enum Action: BindableAction {
         case binding(BindingAction<State>)
+        case update(LocationInfo)
+        case push(LocationInfo)
     }
     
     public var body: some ReducerOf<Self> {
         BindingReducer()
+            .onChange(of: \.locationInfo) { old, new in
+                Reduce { state, action in
+                        .run { send in
+                            await send(.update(new))
+                        }
+                }
+            }
     }
 }

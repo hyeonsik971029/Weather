@@ -15,11 +15,11 @@ struct _App: App {
     
     var body: some Scene {
         WindowGroup {
-            LocationListView(
+            RootView(
                 store: .init(
-                    initialState: LocationInfoListFeature.State()
+                    initialState: RootFeature.State.initialState
                 ) {
-                    LocationInfoListFeature(locationInfoListUseCase: _App.locationInfoListUseCase)
+                    RootFeature(locationInfoListUseCase: _App.locationInfoListUseCase)
                 }
             )
         }

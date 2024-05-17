@@ -8,5 +8,6 @@ let project = Project.makeModule(
         .Project.Domain.Domain,
         .Project.Shared.Extensions,
         .Project.Shared.Utilities
-    ]
+    ],
+    resources: ["Resources/**"]
 )

@@ -18,34 +18,24 @@ import ComposableArchitecture
 public struct LocationInfoListFeature {
     @ObservableState
     public struct State: Equatable {
-        var locationInfoList: [LocationInfo] = []
-        var temperature: Temperature = .init()
-        var isFavorites: Bool = false
+        public static let initalState = State(locationInfoCellList: [])
         
-        public init() {}
+        public var locationInfoCellList: IdentifiedArrayOf<LocationInfoCellFeature.State>
     }
     
     public enum Action {
         case refresh
         case searchTerm(String)
-        case locationInfoList([LocationInfo])
-        case loadWeather(LocationInfo)
-        case weather(Temperature)
-        case updateFavorites(Bool)
-        case dismiss(String, Bool)
-        case errorMessage
-    }
-    
-    private enum CancelIdentifier {
-        case debounced
+        case locationInfoCellList([LocationInfo])
+        case locationInfoCell(IdentifiedActionOf<LocationInfoCellFeature>)
+        case update(LocationInfo)
+        case push(LocationInfo)
     }
     
     public let locationInfoListUseCase: LocationInfoListUseCase
     public init(locationInfoListUseCase: LocationInfoListUseCase) {
         self.locationInfoListUseCase = locationInfoListUseCase
     }
-    
-    @Dependency(\.mainQueue) var mainQueue
     
     public var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -55,7 +45,7 @@ public struct LocationInfoListFeature {
                     .locationInfoListRepository
                     .locationInfoList()
                 let isFavorites = locationInfoList.filter { $0.favorites }
-                return .send(.locationInfoList(isFavorites.isEmpty ? locationInfoList: isFavorites))
+                return .send(.locationInfoCellList(isFavorites.isEmpty ? locationInfoList: isFavorites))
             case .searchTerm(let text):
                 if text.isEmpty {
                     return .send(.refresh)
@@ -63,67 +53,29 @@ public struct LocationInfoListFeature {
                     let filtered = locationInfoListUseCase
                         .locationInfoListRepository
                         .locationInfoList()
-                    return .send(.locationInfoList(filtered.filter { $0.name.contains(text) }))
-                        .debounce(id: CancelIdentifier.debounced, for: 0.2, scheduler: mainQueue)
+                    return .send(.locationInfoCellList(filtered.filter { $0.name.contains(text) }))
                 }
-            case .locationInfoList(let locationInfoList):
-                state.locationInfoList = locationInfoList
+            case .locationInfoCellList(let locationInfoList):
+                let locationInfoCellList = locationInfoList.map {
+                    LocationInfoCellFeature.State(locationInfo: $0)
+                }
+                state.locationInfoCellList = .init(uniqueElements: locationInfoCellList)
                 return .none
-            case .loadWeather(let locationInfo):
-                return self.weatherByLocationInfo(locationInfo)
-            case .weather(let temperature):
-                state.temperature = temperature
+            case .update(let locationInfo):
+                locationInfoListUseCase.locationInfoListRepository.update(locationInfo)
+                return .send(.refresh)
+            case .locationInfoCell(.element(id: _, action: .update(let locationInfo))):
+                return .send(.update(locationInfo))
+            case .locationInfoCell(.element(id: _, action: .push(let locationInfo))):
+                return .send(.push(locationInfo))
+            case .locationInfoCell:
                 return .none
-            case .updateFavorites(let isFavorites):
-                state.isFavorites = isFavorites
-                return .none
-            case .dismiss(let name, let favorites):
-                locationInfoListUseCase
-                    .locationInfoListRepository
-                    .updateFavorites(name: name, favorites: favorites)
-                return .concatenate(
-                    .send(.refresh),
-                    .send(.updateFavorites(false))
-                )
-            case .errorMessage:
+            case .push:
                 return .none
             }
         }
-    }
-    
-    func weatherByLocationInfo(_ locationInfo: LocationInfo) -> Effect<LocationInfoListFeature.Action> {
-        return Effect.publisher {
-            locationInfoListUseCase.weatherRepository.weatherByGrid(locationInfo)
-                .map { weather in
-                    var temperature = Temperature()
-                    let items = weather.response.body.items.item
-                    var dateToString: String? {
-                        let formatter = DateFormatter()
-                        formatter.dateFormat = "yyyyMMdd"
-                        let dateToString = formatter.string(from: Date())
-                        return dateToString
-                    }
-                    items.forEach {
-                        if $0.baseDate == dateToString {
-                            switch $0.category {
-                            case "TMP":
-                                temperature.curr = $0.fcstValue
-                            case "TMN":
-                                temperature.min = $0.fcstValue
-                            case "TMX":
-                                temperature.max = $0.fcstValue
-                            default:
-                                break
-                            }
-                        }
-                    }
-                    
-                    return .weather(temperature)
-                }
-                .receive(on: DispatchQueue.main)
-                .catch { _ in Just(.errorMessage) }
+        .forEach(\.locationInfoCellList, action: \.locationInfoCell) {
+            LocationInfoCellFeature()
         }
     }
 }
-
-

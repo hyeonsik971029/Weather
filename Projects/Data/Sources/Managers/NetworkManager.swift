@@ -11,22 +11,6 @@ import Foundation
 
 import Domain
 
-// TODO: Client 만들어서 사용해보기
-//public actor APIClient {
-//    private let session: URLSession
-//    private let baseURL: URL
-//    
-//    public init(
-//        baseURL: URL,
-//        configuration: URLSessionConfiguration = .default,
-//        delegate: APIClientDelegate? = nil
-//    ) {
-//        self.url = url
-//        self.session = URLSession(configuration: configuration)
-//        self.delegate = delegate ?? DefaultAPIClientDelegate()
-//    }
-//}
-
 public class NetworkManager {
     public static let shared = NetworkManager()
     

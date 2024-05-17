@@ -12,9 +12,10 @@ import Foundation
 import Domain
 
 public class WeatherRepositoryImpl: WeatherRepository {
+    
     public init() {}
     
-    public func weatherByGrid(_ location: LocationInfo) -> AnyPublisher<Weather, Error> {
+    public func weatherByGrid(_ location: Domain.LocationInfo) -> AnyPublisher<Domain.Weather, Error> {
         return NetworkManager.shared.weatherByGrid(location)
     }
 }

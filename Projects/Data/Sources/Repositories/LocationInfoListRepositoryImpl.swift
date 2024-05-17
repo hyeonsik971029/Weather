@@ -56,11 +56,11 @@ public class LocationInfoListRepositoryImpl: LocationInfoListRepository {
         return locationList.isEmpty ? self.locationInfoListByCSV(): locationList
     }
     
-    public func updateFavorites(name: String, favorites: Bool) {
-        var locationList: [LocationInfo] = SimpleDefaults.shared.load("Locations")
-        if let index = locationList.firstIndex(where: { $0.name == name }) {
-            locationList[index].favorites = favorites
-            SimpleDefaults.shared.save("Locations", array: locationList)
+    public func update(_ locationInfo: LocationInfo) {
+        var new: [LocationInfo] = SimpleDefaults.shared.load("Locations")
+        if let index = new.firstIndex(where: { $0.name == locationInfo.name }) {
+            new[index] = locationInfo
         }
+        SimpleDefaults.shared.save("Locations", array: new)
     }
 }
